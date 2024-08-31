@@ -1,0 +1,59 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    border: 2px solid #000;
+    background-color: #fff;
+}
+
+.score, .high-score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.high-score {
+    top: 30px; /* Adjust this to position below the current score */
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 60px; /* Adjust width to fit your image */
+    height: 60px; /* Adjust height to fit your image */
+}
+
+.dino img {
+    width: 100%; /* Ensure image takes up full div */
+    height: 100%;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 30px; /* Reduced the height of obstacles */
+    background-color: #ff0000;
+    animation: moveObstacle 2s infinite linear;
+}
+
+@keyframes moveObstacle {
+    0% { right: -20px; }
+    100% { right: 100%; }
+}
